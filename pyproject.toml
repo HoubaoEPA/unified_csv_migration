@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unified-csv-migration"
+version = "1.0.0"
+description = "CSV-to-PostgreSQL landing-table migration tools"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "sqlalchemy==2.0.44",
+  "psycopg[binary]==3.2.13",
+]
+
+[project.scripts]
+unified-import-csv = "unified_migration.import_csv:main"
+unified-recover = "unified_migration.recover:main"
+unified-transfer-postgres = "unified_migration.transfer_postgres:main"
+
+[tool.setuptools.package-data]
+unified_migration = ["tables.json"]
+
+[tool.ruff]
+line-length = 100

@@ -1,0 +1,19 @@
+{
+  "tables": [
+    {
+      "source_table": "Cancer_UnifiedDB_IUCLID_Table_Combo",
+      "destination_table": "unified_src_cancer",
+      "enabled": true
+    },
+    {
+      "source_table": "Developmental_UnifiedDB_IUCLID_Table_Combo",
+      "destination_table": "unified_src_developmental",
+      "enabled": true
+    },
+    {
+      "source_table": "suggestedOHT_Lookup",
+      "destination_table": "unified_src_oht_lookup",
+      "enabled": true
+    }
+  ]
+}
